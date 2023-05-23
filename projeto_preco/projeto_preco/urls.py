@@ -21,5 +21,6 @@ from app_buscapreco import views
 urlpatterns = [
     # buscapreco.com
     path('',views.pesquisar,name="pesquisar"),
+    # buscapreco/resultados
     path('resultados/',views.exibir_resultados,name='resultados')
 ]
