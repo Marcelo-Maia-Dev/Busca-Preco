@@ -1,0 +1,10 @@
+{% extends 'produtos/base.html' %}
+{% block conteudo %}
+<form action="{% url 'resultados' %}" method="POST">
+    <div>
+        <h1 style="text-align: center;">Pesquisar</div>
+            <input type="text" class="form-control-lg" name="produto" placeholder="Pesquisar...">
+            <input type="submit" value="🔍">
+</form>
+
+{% endblock %}
