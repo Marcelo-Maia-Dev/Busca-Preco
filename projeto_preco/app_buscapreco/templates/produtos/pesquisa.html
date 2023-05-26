@@ -1,10 +1,21 @@
 {% extends 'produtos/base.html' %}
 {% block conteudo %}
-<form action="{% url 'resultados' %}" method="POST">
+
+<style>
+    .centralizar{
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    }
+</style>
+
+<form class="centralizar" action="{% url 'resultados' %}" method="POST">
     <div>
-        <h1 style="text-align: center;">Pesquisar</div>
+        <h1>Pesquisar</div>
             <input type="text" class="form-control-lg" name="produto" placeholder="Pesquisar...">
-            <input type="submit" value="🔍">
+            <input class="form-control-lg" type="submit" value="🔎">
 </form>
 
 {% endblock %}
