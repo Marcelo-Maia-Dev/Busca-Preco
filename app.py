@@ -30,5 +30,9 @@ def novo_produto(sql,conexao,nome,preco,site,data_cotacao,link_imagem):
         #Se não houver dados iguais, gravar um novo produto
         query = "INSERT INTO app_buscapreco_produto(nome,preco,site,data_cotacao,link_imagem) VALUES(%S,%S,%S,%S,%S)"
         valores = (nome,preco,site,data_cotacao,link_imagem)
+        sql.execute(query, valores)
+    else:
+        print('Dados já cadastrados anteriormente!')
     #Se já houver dados iguais, não gravar um novo produto
-    else: 
+novo_produto(sql,conexao,'Iphone 15',13000.50,'apple.com/iphone15',datetime.now(),'www.imagem.com/imagem1.jpg')
+conexao.commit()
