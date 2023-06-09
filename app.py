@@ -73,7 +73,11 @@ def iniciar_driver():
     return driver, wait
 
 def varrer_site1():
-    pass
+    # 1 - entrar no site - http://site1produto.netlify.app/
+    driver, wait = iniciar_driver()
+    driver.get("http://site1produto.netlify.app/")
+    # 2 - anotar o nome do produto
+    nome = driver.find_elements(By.XPATH,"//div[@class='detail-box']/a")
 
 def varrer_site2():
     pass
