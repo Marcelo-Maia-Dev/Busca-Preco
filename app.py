@@ -71,3 +71,12 @@ def iniciar_driver():
         ]
     )
     return driver, wait
+
+def varrer_site1():
+    pass
+
+def varrer_site2():
+    pass
+
+def varrer_site3():
+    pass
