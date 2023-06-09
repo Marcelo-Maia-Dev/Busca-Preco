@@ -1,1 +1,1 @@
-Já esteve no supermercado ou na farmácia, tentando decidir se leva ou não um produto, mas não sabe se ele está caro ou barato? Com o Busca Preço, em 1 clique, você consegue encontrar o preço justo para um produto.
+Já esteve no supermercado ou na farmácia, tentando decidir se leva ou não um produto, mas não sabe se ele está caro ou barato? Com o Busca-Preço, em 1 clique, você consegue encontrar o preço justo para um produto.
