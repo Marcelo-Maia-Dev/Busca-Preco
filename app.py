@@ -78,6 +78,8 @@ def varrer_site1():
     driver.get("http://site1produto.netlify.app/")
     # 2 - anotar o nome do produto
     nome = driver.find_elements(By.XPATH,"//div[@class='detail-box']/a")
+    # 3 - anotar preço
+    precos = driver.find_elements(By.XPATH,"//h6[@class='price_heading']")
 
 def varrer_site2():
     pass
