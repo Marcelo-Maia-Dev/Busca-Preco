@@ -80,6 +80,10 @@ def varrer_site1():
     nome = driver.find_elements(By.XPATH,"//div[@class='detail-box']/a")
     # 3 - anotar preço
     precos = driver.find_elements(By.XPATH,"//h6[@class='price_heading']")
+    # 4 - anotar o link de onde foi extraido a informacao
+    site = driver.current_url
+    # 5 - anotar o link da imagem
+    links_imagem = driver.find_elements(By.XPATH,"//div[@class='img-box']/img")
 
 def varrer_site2():
     pass
