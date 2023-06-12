@@ -79,11 +79,11 @@ def varrer_site1():
     # 2 - anotar o nome do produto
     nome = wait.until(condicao_esperada.visibility_of_all_elenebts_located((By.XPATH,"//div[@class='detail-box']/a")))
     # 3 - anotar preço
-    precos = driver.find_elements(By.XPATH,"//h6[@class='price_heading']")
+    precos = wait.until(condicao_esperada.visibility_of_all_elenebts_located((By.XPATH,"//h6[@class='price_heading']"))
     # 4 - anotar o link de onde foi extraido a informacao
     site = driver.current_url
     # 5 - anotar o link da imagem
-    links_imagem = driver.find_elements(By.XPATH,"//div[@class='img-box']/img")
+    links_imagem = wait.until(condicao_esperada.visibility_of_all_elenebts_located(By.XPATH,"//div[@class='img-box']/img"))
 
 def varrer_site2():
     pass
