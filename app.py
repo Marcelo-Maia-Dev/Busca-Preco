@@ -5,9 +5,9 @@ from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 from selenium.common.exceptions import *
-from selenium.webdriver.suport.ui import WebDriverWait
+from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.chrome.service import Service as ChromeService
-from selenium.webdriver.suport import expected_conditions as condicao_esperada
+from selenium.webdriver.support import expected_conditions as condicao_esperada
 
 conexao = psycopg2.connect(
     database='railway',
@@ -84,6 +84,19 @@ def varrer_site1():
     site = driver.current_url
     # 5 - anotar o link da imagem
     links_imagem = wait.until(condicao_esperada.visibility_of_all_elements_located((By.XPATH,"//div[@class='img-box']/img")))
+    nome_iphone = nomes[0].text
+    nome_gopro = nomes[1].text
+
+    precos_iphone = precos[0].text.split(' ')[1]
+    precos_gopro = precos[1].text.split(' ')[1]
+
+    links_imagem_iphone = links_imagem[0].get.attribute('src')
+    links_imagem_gopro = links_imagem[1].get.attribute('src') 
+
+    novo_produto(sql, conexao, nome_iphone, preco_iphone, site, datetime.now(), links_imagem_iphone)
+    novo_produto(sql, conexao, nome_gopro, preco_gopro, site, datetime.now(), links_imagem_gopro)   
+        
+    
 
 def varrer_site2():
     pass
