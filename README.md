@@ -1,3 +1,5 @@
+# Busca-Preço
+
 Já esteve no supermercado ou na farmácia, tentando decidir se leva ou não um produto, mas não sabe se ele está caro ou barato? Com o Busca-Preço, em 1 clique, você consegue encontrar o preço justo para um produto.
 
 Este repositório contém um sistema de comparação de preços que automatiza a busca de produtos em vários sites e compara os preços entre eles. O objetivo é encontrar o preço mais barato para um determinado produto, economizando tempo e dinheiro para os usuários.
