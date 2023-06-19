@@ -35,7 +35,7 @@ def novo_produto(sql,conexao,nome,preco,site,data_cotacao,link_imagem):
         print('Dados já cadastrados anteriormente!')
     #Se já houver dados iguais, não gravar um novo produto
 # novo_produto(sql,conexao,'Iphone 15',13000.50,'apple.com/iphone15',datetime.now(),'www.imagem.com/imagem1.jpg')
-conexao.commit()
+    conexao.commit()
 
 # Criar um web scraper(atras do selenium)
 
