@@ -6,17 +6,17 @@ Este repositório contém um sistema de comparação de preços que automatiza a
 
 ## **Funcionalidades**
 
-Pesquisa automatizada: O sistema realiza buscas em diversos sites de comércio eletrônico, utilizando termos de pesquisa fornecidos pelo usuário.
+**Pesquisa automatizada:** O sistema realiza buscas em diversos sites de comércio eletrônico, utilizando termos de pesquisa fornecidos pelo usuário.
 
-Comparação de preços: Os preços encontrados são comparados e organizados em uma lista, do mais barato ao mais caro.
+**Comparação de preços:** Os preços encontrados são comparados e organizados em uma lista, do mais barato ao mais caro.
 
-Detalhes do produto: Além do preço, o sistema também exibe informações detalhadas sobre cada produto encontrado, como descrição, avaliações dos usuários e disponibilidade.
+**Detalhes do produto:** Além do preço, o sistema também exibe informações detalhadas sobre cada produto encontrado, como descrição, avaliações dos usuários e disponibilidade.
 
-Links diretos para compra: O sistema fornece links diretos para a página de compra do produto em cada site, facilitando a aquisição pelos usuários.
+**Links diretos para compra:** O sistema fornece links diretos para a página de compra do produto em cada site, facilitando a aquisição pelos usuários.
 
-Notificações de preços: Os usuários podem se cadastrar para receber notificações por e-mail quando o preço de um determinado produto atingir um valor desejado.
+**Notificações de preços:** Os usuários podem se cadastrar para receber notificações por e-mail quando o preço de um determinado produto atingir um valor desejado.
 
-O sistema possui duas partes principais: *o front-end e o back-end.*
+**O sistema possui duas partes principais:** `o front-end e o back-end.`
 
 ## *Front-end*
 
@@ -39,6 +39,6 @@ Notificações de preços: Os usuários podem se cadastrar para receber notifica
 
 O sistema de comparação de preços foi desenvolvido utilizando as seguintes tecnologias:
 
-Front-end: HTML, CSS.
+Front-end: `HTML`, `CSS`.
 
-Back-end: Python com uma combinação de bibliotecas para web scraping e processamento de dados.
+Back-end: `Python` com uma combinação de bibliotecas para web scraping e processamento de dados.
