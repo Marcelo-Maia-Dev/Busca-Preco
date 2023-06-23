@@ -8,6 +8,8 @@ from selenium.common.exceptions import *
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.chrome.service import Service as ChromeService
 from selenium.webdriver.support import expected_conditions as condicao_esperada
+import schedule
+from time import sleep
 
 conexao = psycopg2.connect(
     database='railway',
@@ -140,4 +142,14 @@ def varrer_site3():
     novo_produto(sql, conexao, nome_iphone, float(preco_iphone), driver.current_url, datetime.now(), links_imagem_iphone)
     novo_produto(sql, conexao, nome_gopro, float(preco_gopro), driver.current_url, datetime.now(), links_imagem_gopro)   
 
-    print('site2 varrido')
+    print('site3 varrido')
+
+    def roda_tarefas():
+        varrer_site1()
+        varrer_site2()
+        varrer_site3()
+
+    schedule.every().day.at('06:00').do(roda_tarefas)
+    while True:
+        schedule.run_pending()
+        sleep(1)
