@@ -102,7 +102,7 @@ def varrer_site2():
     
     driver, wait = iniciar_driver()
     driver.get("http://site2produto.netlify.app/")    
-    nome = wait.until(condicao_esperada.visibility_of_all_elenebts_located((By.XPATH,"//div[@class='why-text']")))
+    nome = wait.until(condicao_esperada.visibility_of_all_elements_located((By.XPATH,"//div[@class='why-text']")))
     precos = wait.until(condicao_esperada.visibility_of_all_elements_located((By.XPATH,"//div[@class='why-text']//h5")))
     imagens = wait.until(condicao_esperada.visibility_of_all_elements_located((By.XPATH,"//img[@class='img-fluid']")))
 
@@ -122,4 +122,22 @@ def varrer_site2():
         
 
 def varrer_site3():
-    pass
+    driver, wait = iniciar_driver()
+    driver.get("http://site3produto.netlify.app/")    
+    nome = wait.until(condicao_esperada.visibility_of_all_elements_located((By.XPATH,"//div[@class='product_item_text']//h6/a")))
+    precos = wait.until(condicao_esperada.visibility_of_all_elements_located((By.XPATH,"//div[@class='product_item_text']//h5")))
+    imagens = wait.until(condicao_esperada.visibility_of_all_elements_located((By.XPATH,"//img[@class='product_item_pic set-bg']")))
+
+    nome_iphone = nomes[0].text.split('\n')[0]  
+    nome_gopro = nomes[1].text.split("\n")[0]
+
+    precos_iphone = precos[0].text.split('$')[1]
+    precos_gopro = precos[1].text.split('$')[1]
+
+    links_imagem_iphone = driver.current_url+imagens[0].get.attribute('style').split(" ")[1][5:-3]
+    links_imagem_gopro = driver.current_url+imagens[1].get.attribute('style').split(" ")[1][5:-3]
+
+    novo_produto(sql, conexao, nome_iphone, float(preco_iphone), driver.current_url, datetime.now(), links_imagem_iphone)
+    novo_produto(sql, conexao, nome_gopro, float(preco_gopro), driver.current_url, datetime.now(), links_imagem_gopro)   
+
+    print('site2 varrido')
